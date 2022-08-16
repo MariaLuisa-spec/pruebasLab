@@ -28,8 +28,7 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-                                        
+                                        <th>No</th>                                        
 										<th>Identificacion</th>
 										<th>Nombres</th>
 										<th>Apellidos</th>
@@ -49,7 +48,9 @@
 											<td>{{ $paciente->edad }}</td>
 											<td>{{ $paciente->genero }}</td>
 											<td>{{ $paciente->EPS }}</td>
+                                            <td> <button type="button" class="btn btn-light" href="home/pacientes/index/pruebas">Ver más</button> </td>
                                         </tr>
+                                        
                                     @endforeach
                                 </tbody>
                             </table>

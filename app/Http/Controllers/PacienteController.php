@@ -27,8 +27,8 @@ class PacienteController extends Controller
     public function consulta_by_users()
     {
         //$pacientes = Paciente::paginate();
-        //$paciente = Paciente::find($id);
-        return view('paciente.consulta_by_users')
+        //$paciente = Paciente::find();
+        return view('paciente.consulta_by_users', )
             ->with('success', 'Ingresa tu Número de Docuento');
             
     }
@@ -68,10 +68,12 @@ class PacienteController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    //public function show($id)
+    public function show()
     {
-        $paciente = Paciente::find($id);
-
+        //$paciente = Paciente::find($id);
+        $paciente = Paciente::pluck('identificacion');
+        //return view('paciente.show', compact('paciente'));
         return view('paciente.show', compact('paciente'));
     }
 

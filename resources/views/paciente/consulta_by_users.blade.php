@@ -16,6 +16,7 @@
                     @endif
                     @method('POST')
                     <form method="post">
+                    @csrf
                         <div class="form-group">
                             <label for="cedula">Cédula</label>
                             <input type="number" class="form-group" id="cedula" name="cedula" >
