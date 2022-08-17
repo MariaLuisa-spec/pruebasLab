@@ -23,6 +23,13 @@ class PacienteController extends Controller
         return view('paciente.index', compact('pacientes'))
             ->with('i', (request()->input('page', 1) - 1) * $pacientes->perPage());
     }
+    public function index_pruebas($id)
+    {
+        $paciente = Paciente::find($id);
+        //$pacientes = Paciente::where("id",$id)->get(nombres, apellidos, edad);
+        return view('paciente.index_pruebas')
+            ->with('paciente'->$paciente);
+    }
 
     public function consulta_by_users()
     {

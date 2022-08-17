@@ -48,9 +48,12 @@
 											<td>{{ $paciente->edad }}</td>
 											<td>{{ $paciente->genero }}</td>
 											<td>{{ $paciente->EPS }}</td>
-                                            <td> <button type="button" class="btn btn-light" href="home/pacientes/index/pruebas">Ver más</button> </td>
+                                            <form method="POST">
+                                                <td> <a class="btn btn-sm btn-primary " href="home/pacientes/index/pruebas/index_pruebas/{{$paciente->id}}"> Resultados</a> </td>
+                                                    @csrf
+                                            </form>
                                         </tr>
-                                        
+
                                     @endforeach
                                 </tbody>
                             </table>
