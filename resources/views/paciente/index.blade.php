@@ -48,7 +48,7 @@
 											<td>{{ $paciente->edad }}</td>
 											<td>{{ $paciente->genero }}</td>
 											<td>{{ $paciente->EPS }}</td>
-                                            <form method="POST">
+                                            <form method="POST" action = "home/pacientes/index/pruebas/{paciente}">
                                                 <td> <a class="btn btn-sm btn-primary " href="home/pacientes/index/pruebas/index_pruebas/{{$paciente->id}}"> Resultados</a> </td>
                                                     @csrf
                                             </form>

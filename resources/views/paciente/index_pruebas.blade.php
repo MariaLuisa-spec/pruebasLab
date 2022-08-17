@@ -50,12 +50,7 @@
                                             <td>{{ $paciente->genero }}</td>
                                             <td>{{ $paciente->EPS }}</td>
                                             
-                                            <form method="POST">
-                                                <td> <a class="btn btn-sm btn-primary " href="{{ route('pacientes.index',$paciente->id) }}"> Show</a> </td>
-                                                @csrf
-                                            </form>
-                                        </tr>
-                                            
+                                        </tr>                                           
                                         
                                     </tbody>
                                 </table>

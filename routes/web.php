@@ -23,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('home/pacientes', [App\Http\Controllers\PacienteController::class, 'create'])->name('home/pacientes');
 Route::post('home/pacientes/store', [App\Http\Controllers\PacienteController::class, 'store'])->name('home/pacientes/store');
 Route::get('home/pacientes/index', [App\Http\Controllers\PacienteController::class, 'index'])->name('home/pacientes/index');
-Route::get('home/pacientes/index/pruebas/{paciente}', [App\Http\Controllers\PacienteController::class, 'index_pruebas']);
+Route::get('home/pacientes/index/pruebas/{paciente}', [App\Http\Controllers\PacienteController::class, 'index_pruebas'])->name('home/pacientes/index/pruebas/{paciente}');
 Route::get('/consulta', [App\Http\Controllers\PacienteController::class, 'consulta_by_users'])->name('/consulta');
 //Route::post('home/pacientes/#', [App\Http\Controllers\PacienteController::class, 'create'])->name('home/pacientes/#');
 //Route::resource('home/pacientes', App\Http\Controllers\PacienteController::class);
