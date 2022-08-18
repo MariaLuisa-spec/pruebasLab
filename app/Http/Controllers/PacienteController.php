@@ -27,8 +27,11 @@ class PacienteController extends Controller
     {
         $paciente = Paciente::find($id);
         //$pacientes = Paciente::where("id",$id)->get(nombres, apellidos, edad);
-        return view('paciente.index_pruebas')
-            ->with('paciente'->$paciente);
+        //return ('paciente.index_pruebas')
+        return view('paciente.index_pruebas',compact('paciente'));
+        
+
+        // ->with('paciente'->$paciente);
     }
 
     public function consulta_by_users()
@@ -50,7 +53,6 @@ class PacienteController extends Controller
         $paciente = new Paciente();
         echo "echo does not require parentheses.";
         return view('paciente.create', compact('paciente'));
-        //return ('holi');
     }
 
     /**
@@ -66,7 +68,7 @@ class PacienteController extends Controller
         $paciente = Paciente::create($request->all());
 
         return redirect()->route('home')
-            ->with('success', 'Paciente created successfully.');
+            ->with('Paciente created successfully.');
     }
 
     /**

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Paciente
+    paciente
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Paciente') }}
+                                {{ __('paciente') }}
                             </span>
                         </div>
                     </div>
@@ -22,43 +22,45 @@
                             <p>{{ $message }}</p>
                         </div>
                     @endif
-                    <form action = "home/pacientes/index/pruebas/{{$paciente->id}}" method="POST">
+                    
+                    <form action = "/home/consulta/{{$paciente->id}}" method="POST">
                         @csrf
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-hover">
                                     <thead class="thead">
                                         <tr>
-                                            <th>No</th>                                        
-                                            <th>Identificacion</th>
-                                            <th>Nombres</th>
-                                            <th>Apellidos</th>
-                                            <th>Edad</th>
-                                            <th>Genero</th>
-                                            <th>Eps</th>
+                                                                                   
+                                            <th>TP</th>
+                                            <th>PTT</th>
+                                            <th>III</th>
+                                            <th>AT III</th>
+                                            <th>TT</th>
+                                            <th>Fibrinogeno</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         
-                                        <tr>
-                                            <td scope="row"></td>                                            
-                                            <td>{{ $paciente->Identificacion }}</td>
-                                            <td>{{ $paciente->nombres }}</td>
-                                            <td>{{ $paciente->apellidos }}</td>
-                                            <td>{{ $paciente->edad }}</td>
-                                            <td>{{ $paciente->genero }}</td>
-                                            <td>{{ $paciente->EPS }}</td>
+                                        <tr>                                                                                       
+                                            <td>{{ $paciente->TP}}</td>
+                                            <td>{{ $paciente->PTT }}</td>
+                                            <td>{{ $paciente->III }}</td>
+                                            <td>{{ $paciente->AT_III }}</td>
+                                            <td>{{ $paciente->TT}}</td>
+                                            <td>{{ $paciente->Fibrinogeno }}</td>
                                             
-                                        </tr>                                           
+                                        </tr>
+                                        <div class="float-right">
+                                            <a class="btn btn-primary" href="/home/consulta"> Back</a>
+                                        </div>    
                                         
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </form>
-                </div>
-                {!! $pacientes->links() !!}
+                </div>               
             </div>
         </div>
     </div>

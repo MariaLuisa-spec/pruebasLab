@@ -16,7 +16,7 @@
                         <span class="card-title">Create Paciente</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('home/pacientes/store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('home/consulta/store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('paciente.form')

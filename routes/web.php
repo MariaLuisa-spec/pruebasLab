@@ -20,11 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('home/pacientes', [App\Http\Controllers\PacienteController::class, 'create'])->name('home/pacientes');
-Route::post('home/pacientes/store', [App\Http\Controllers\PacienteController::class, 'store'])->name('home/pacientes/store');
-Route::get('home/pacientes/index', [App\Http\Controllers\PacienteController::class, 'index'])->name('home/pacientes/index');
-Route::get('home/pacientes/index/pruebas/{paciente}', [App\Http\Controllers\PacienteController::class, 'index_pruebas'])->name('home/pacientes/index/pruebas/{paciente}');
-Route::get('/consulta', [App\Http\Controllers\PacienteController::class, 'consulta_by_users'])->name('/consulta');
-//Route::post('home/pacientes/#', [App\Http\Controllers\PacienteController::class, 'create'])->name('home/pacientes/#');
-//Route::resource('home/pacientes', App\Http\Controllers\PacienteController::class);
-//Route::get('user-delete/{id}',[UserController::class,'delete'])->name('user.delete');
+Route::get('/home/pacientes', [App\Http\Controllers\PacienteController::class, 'create']);
+Route::get('/home/consulta', [App\Http\Controllers\PacienteController::class, 'index'])->name('home/consulta');
+Route::post('/home/consulta/store', [App\Http\Controllers\PacienteController::class, 'store'])->name('home/consulta/store');
+//Route::get('/home/pacientes/index/pruebas/index_pruebas/{{$paciente->id}}', [App\Http\Controllers\PacienteController::class, 'index_pruebas'])->name('/home/pacientes/index/pruebas/index_pruebas/{{$paciente->id}}');
+Route::get('/home/consulta/{id}', [App\Http\Controllers\PacienteController::class, 'index_pruebas']);
+Route::get('/consulta_by_user', [App\Http\Controllers\PacienteController::class, 'consulta_by_users'])->name('/consulta_by_user');
+

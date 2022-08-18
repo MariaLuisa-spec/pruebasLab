@@ -15,8 +15,8 @@
 
                     @endif
                     <div >
-                        <a href="home/pacientes" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Ingreso Paciente</a>
-                        <a href="home/pacientes/index" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Consulta Masiva</a>
+                        <a href="/home/pacientes" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Ingreso Paciente</a>
+                        <a href="/home/consulta" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Consulta Masiva</a>
                         <a href="#" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Control de Calidad</a>
                     </div>
                     
